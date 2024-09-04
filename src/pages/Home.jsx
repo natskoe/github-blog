@@ -3,6 +3,7 @@ import CardIssue from "../components/CardIssue"
 import CardProfile from "../components/CardProfile"
 import Search from "../components/Search"
 import TitleIssue from "../components/AboutIssue"
+import { Link } from "react-router-dom"
 
 function Home(){
 
@@ -56,13 +57,12 @@ function Home(){
             <div className="flexbox">
             {issues.map((value) => {
                 return(
-                    
+                    <Link to={`/issue/${value.number}`} key={value.id}>
                         <CardIssue key={value.id} title={value.title} text={value.body} date={getDate(value.updated_at)} />
-                    
+                    </Link>
                 )
             })}
             </div>
-            <TitleIssue></TitleIssue>  
         </div>
     )
 }
