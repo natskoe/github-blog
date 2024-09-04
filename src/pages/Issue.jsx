@@ -6,7 +6,7 @@ import DescriptionIssue from "../components/DescriptionIssue"
 function Issue(){
 
     const { issueId } = useParams();
-    const [issue, setIssue] = useState(null);
+    const [issue, setIssue] = useState("");
 
     function getDate(dateString) {
         const currentDate = new Date();
@@ -23,7 +23,6 @@ function Issue(){
         fetch(`https://api.github.com/repos/natskoe/github-blog/issues/${issueId}`).then((response)=>{
             response.json().then((data)=>{
                 console.log(data)
-                
                 setIssue(data)
             })
         })  
@@ -31,12 +30,16 @@ function Issue(){
 
     console.log(issueId)
 
+    if(!issue){
+        return(
+         <div> Carregando... </div>
+        ) 
+     }
+
     return(
-        <div>
-            {/*parameters: link, titleIssue, username, date, comments */}
-            
-            {/* <AboutIssue link={issue.url} titleIssue={issue.title} username={issue.user.login} date={getDate(issue.updated_at)} comments={issue.comments}></AboutIssue> */}
-            <DescriptionIssue></DescriptionIssue>
+        <div> 
+            <AboutIssue link={issue.html_url} titleIssue={issue.title} username={issue.user.login} date={getDate(issue.updated_at)} comments={issue.comments}></AboutIssue>
+            <DescriptionIssue description={issue.body}></DescriptionIssue>
         </div>
     )
 }

@@ -61,7 +61,6 @@ function Home(){
                     </Link>
                 )
             })}
-            <TitleIssue></TitleIssue>  
         </div>
     )
 }
