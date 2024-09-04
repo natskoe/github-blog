@@ -1,0 +1,55 @@
+.card-profile{
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    background-color: #FC9D9A ;
+    width: 60vw;
+    height: 40vh;
+    border-radius: 20px;
+    
+}
+
+.image-profile{
+    width: 16vw;
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.content{
+    width: 100%;
+    
+}
+
+.name_git{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name_git h1{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.github_redirect{
+    margin-right: 30px;
+    font-weight: 400;
+}
+
+.bio{
+    margin-top: 20px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 130px;
+    gap: 60px;
+}
+
+Info{
+    display: flex;
+}

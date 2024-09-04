@@ -55,7 +55,7 @@ function Home(){
     }
     return(
         <div>
-            <CardProfile name={user.name} username={user.username} img={user.avatar_url} link={user.html_url} bio={user.bio} company={user.company} followers={user.followers}/>
+            <CardProfile name={user.name} username={user.login} img={user.avatar_url} link={user.html_url} bio={user.bio} company={user.company} followers={user.followers}/>
             <Search search={search} onChangeSearch={onChangeSearch} num_posts={issues.length}/>
             {issues.map((value) => {
                 return(
