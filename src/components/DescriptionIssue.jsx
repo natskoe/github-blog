@@ -1,6 +1,8 @@
+import "../styles/home/about-issue.css"
+
 function DescriptionIssue({description}){
     return(
-        <div>
+        <div className="description">
             <p>{description}</p>
         </div>
     )
