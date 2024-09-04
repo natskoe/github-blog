@@ -3,6 +3,7 @@ import CardIssue from "../components/CardIssue"
 import CardProfile from "../components/CardProfile"
 import Search from "../components/Search"
 import TitleIssue from "../components/AboutIssue"
+import { Link } from "react-router-dom"
 
 function Home(){
 
@@ -55,7 +56,9 @@ function Home(){
             <Search search={search} onChangeSearch={onChangeSearch} num_posts={issues.length}/>
             {issues.map((value) => {
                 return(
-                    <CardIssue key={value.id} title={value.title} text={value.body} date={getDate(value.updated_at)} />
+                    <Link to={`/issue/${value.number}`} key={value.id}>
+                        <CardIssue key={value.id} title={value.title} text={value.body} date={getDate(value.updated_at)} />
+                    </Link>
                 )
             })}
             <TitleIssue></TitleIssue>  
