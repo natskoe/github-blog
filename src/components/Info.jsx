@@ -1,6 +1,8 @@
+import "../styles/home/card-profile.css"
+
 function Info({icon, text}){
     return(
-        <div>
+        <div className="info">
             <figure>
                 <img src={icon}/>
             </figure>

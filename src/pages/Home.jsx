@@ -53,11 +53,15 @@ function Home(){
         <div>
             <CardProfile name={user.name} username={user.login} img={user.avatar_url} link={user.html_url} bio={user.bio} company={user.company} followers={user.followers}/>
             <Search search={search} onChangeSearch={onChangeSearch} num_posts={issues.length}/>
+            <div className="flexbox">
             {issues.map((value) => {
                 return(
-                    <CardIssue key={value.id} title={value.title} text={value.body} date={getDate(value.updated_at)} />
+                    
+                        <CardIssue key={value.id} title={value.title} text={value.body} date={getDate(value.updated_at)} />
+                    
                 )
             })}
+            </div>
             <TitleIssue></TitleIssue>  
         </div>
     )

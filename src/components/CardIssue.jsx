@@ -1,14 +1,16 @@
+import "../styles/home/card-issue.css"
+
 function CardIssue({title, text, date}){
     return(
-        <div>
-            <div>
-                <span>{title}</span>
-                <span>{date}</span>
+                <div className="card">
+                <div className="title">
+                    <span>{title}</span>
+                    <span className="date">{date}</span>
+                </div>
+                <div className="text">
+                    <p>{text}</p>
+                </div>
             </div>
-            <div>
-                <p>{text}</p>
-            </div>
-        </div>
     )
 }
 

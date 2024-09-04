@@ -27,6 +27,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #F9CDAD;
+	font-family: Arial, Helvetica, sans-serif;
 }
 ol, ul {
 	list-style: none;

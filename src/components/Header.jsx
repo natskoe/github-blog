@@ -4,8 +4,8 @@ import "../styles/global.css";
 
 function Header(){
     return(
-        <header class="header">
-                <figure class="figure">
+        <header className="header">
+                <figure className="figure">
                     <img src={cmd}/>
                 </figure>
                 <span>

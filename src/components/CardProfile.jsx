@@ -9,23 +9,23 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 function CardProfile({img, link, name, username, bio, company, followers}){
     return(
         <>
-           <div class= "card-profile">
+           <div className= "card-profile">
                 <figure>
-                    <img class = "image-profile" src={img}/>
+                    <img className = "image-profile" src={img}/>
                 </figure>
-                <div class="content">
-                    <div class="name_git">
+                <div className="content">
+                    <div className="name_git">
                         <h1>{name}</h1>
-                        <div class="github_redirect">
-                            <Link class="link" to={link} target="_blank">GITHUB</Link>
+                        <div className="github_redirect">
+                            <Link className="link" to={link} target="_blank">GITHUB</Link>
                             <FaExternalLinkAlt />
                         </div> 
                     </div>
                     
-                    <div class="bio">
+                    <div className="bio">
                         <p>{bio}</p>
                     </div>
-                    <div class="icons">
+                    <div className="icons">
                         <Info icon={github_icon} text={username}/>
                         <Info icon={company_icon} text={company}/>
                         <Info icon={followers_icon} text={followers}/>
