@@ -52,11 +52,7 @@ function Home(){
     return(
         <div>
             <CardProfile name={user.name} username={user.login} img={user.avatar_url} link={user.html_url} bio={user.bio} company={user.company} followers={user.followers}/>
-<<<<<<< HEAD
             <Search search={search} onChangeSearch={onChangeSearch} num_posts={issues.length}/>
-=======
-            <Search search={search} onChangeSearch={onChangeSearch} num_posts={issues.length}/>  
->>>>>>> 62d1aa94dffc8027deffa8116008f239e53faa52
             {issues.map((value) => {
                 return(
                     <CardIssue key={value.id} title={value.title} text={value.body} date={getDate(value.updated_at)} />
